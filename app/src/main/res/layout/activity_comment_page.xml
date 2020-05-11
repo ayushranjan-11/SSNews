@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".comment_page">
+    <TextView
+        android:id="@+id/comment_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/customborder"
+        android:textStyle="bold"
+        android:text="Comments"
+        android:textSize="22sp"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black">
+
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/comments_list"
+        android:layout_below="@id/comment_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:scrollbars="vertical"
+        android:background="#FFFFFF"/>
+    
+    <EditText
+        android:id="@+id/comment_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="45dp"
+        android:padding="8dp"
+        android:hint="Add a Comment..."
+        android:inputType="textMultiLine"
+        android:background="@drawable/customborder2"
+        android:autofillHints="comment">
+
+    </EditText>
+    <ImageButton
+        android:id="@+id/comment_submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:layout_alignBottom="@id/comment_box"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_send_black_24dp"
+        android:padding="10dp"
+        android:background="?android:selectableItemBackground">
+
+    </ImageButton>
+</RelativeLayout>

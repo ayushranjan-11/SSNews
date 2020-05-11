@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">SSNews</string>
+    <string name="abcd">FEEDBACK</string>
+    <string name="feed">YOUR FEEDBACK IS VALUABLE FOR US</string>
+    <string name="notifi">NOTIFICATION</string>
+    <string name="dummystring">THIS IS SAMPLE TEXT TO CHECK BORDERS AND ADAPTATION</string>
+    <string name="gridstring">SAMPLE TEXT OF TWO LINE </string>
+    <string name="submit">SEND</string>
+    <string name="source">NEWS SOURCE</string>
+    <string name="headline">THIS WILL BE NEWS HEADLINE</string>
+    <string name="share">SHARE</string>
+    <string name="comment">COMMENTS</string>
+    <string name="news" translatable="false">The Entertainment Software Association has announced (via GamesIndustry.biz) that E3 2021 will be taking place and that it will occupy its traditional June slot, specifically running from June 15 to June 17, 2021.This announcement comes only a month after the ESA confirmed the cancellation of E3 2020 in response to the ongoing coronavirus pandemic. The organizer has said it’s planning a ‘reimagined’ event for next year, though what this will involve isn’t entirely clear just yet. The ESA\'s wish to do something different is not entirely surprising though, given it\'s been robbed of its opportunity to ‘shake things up’ in 2020 as it had wanted and E3 itself has, in recent years, had its relevancy called into question.</string>
+    <string name="content">This will check the content of this layout that where it\'s ending and next line where is starting</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>

@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toTopOf="@id/scrollviewmainpage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </include>
+
+    <ScrollView
+        android:id="@+id/scrollviewmainpage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#DCDCDC"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="?android:attr/actionBarSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:id="@+id/framelayout1"
+                android:layout_width="match_parent"
+                android:layout_height="390dp"
+                android:clickable="true"
+                android:elevation="5dp"
+                android:focusable="true"
+                android:onClick="articledetail">
+
+                <ImageView
+                    android:id="@+id/carouselimage1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/test_one">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/carouselheadline1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/faktpro_medium"
+                    android:text="@string/dummystring"
+                    android:textColor="#FFFFFF"
+                    android:textSize="23sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/caroselnewssource1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:fontFamily="@font/faktpro_normal"
+                    android:text="@string/source"
+                    android:textColor="#C9C9C9"
+                    android:textSize="19sp">
+
+                </TextView>
+
+                <FrameLayout
+                    android:id="@+id/carousellikebutton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom">
+
+                    <com.like.LikeButton
+                        android:id="@+id/heart_button0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:icon_size="10dp"
+                        app:icon_type="heart" />
+                </FrameLayout>
+
+            </FrameLayout>
+
+            <GridLayout
+                android:id="@+id/gridlayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFF"
+                android:columnCount="2"
+                android:elevation="2dp"
+                android:orientation="horizontal"
+                android:rowCount="1">
+
+                <LinearLayout
+                    android:id="@+id/gridnewslinearlayout1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:background="@drawable/customborder"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="articledetail"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/gridnewsimage1"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/test_two">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/tgridnewsheadline1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="5dip"
+                        android:fontFamily="@font/faktpro_normal"
+                        android:text="@string/headline"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:id="@+id/gridnewssourcelayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/gridnewssource1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:fontFamily="@font/faktpro_normal"
+                            android:text="@string/source"
+                            android:textColor="#C8C8C8"
+                            android:textSize="13sp">
+
+                        </TextView>
+
+                        <LinearLayout
+                            android:id="@+id/gridnewslikebuton1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:orientation="vertical">
+
+                            <com.like.LikeButton
+                                android:id="@+id/heart_button1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:icon_size="10dp"
+                                app:icon_type="heart" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gridnewslinearlayout2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:background="@drawable/customborder"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="articledetail"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/gridnewsimage2"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/test_three">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/tgridnewsheadline2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="5dip"
+                        android:fontFamily="@font/faktpro_normal"
+                        android:text="@string/headline"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:id="@+id/gridnewssourcelayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/gridnewssource2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:fontFamily="@font/faktpro_normal"
+                            android:text="@string/source"
+                            android:textColor="#C8C8C8"
+                            android:textSize="13sp">
+
+                        </TextView>
+
+                        <LinearLayout
+                            android:id="@+id/gridnewslikebuton2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:orientation="vertical">
+
+                            <com.like.LikeButton
+                                android:id="@+id/heart_button2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:icon_size="10dp"
+                                app:icon_type="heart" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </GridLayout>
+
+            <FrameLayout
+                android:id="@+id/rightalignframe1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="#FFFF"
+                android:clickable="true"
+                android:elevation="2dp"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rightalignimage1"
+                        android:layout_width="120dp"
+                        android:layout_height="110dp"
+                        android:layout_gravity="end"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/test_four">
+
+                    </ImageView>
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:columnCount="1"
+                        android:orientation="horizontal"
+                        android:rowCount="2">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_row="0"
+                            android:layout_column="0">
+
+                            <TextView
+                                android:id="@+id/rightalignheadline1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="5dip"
+                                android:fontFamily="@font/faktpro_normal"
+                                android:text="@string/dummystring"
+                                android:textColor="@android:color/black"
+                                android:textSize="19sp">
+
+                            </TextView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_row="1"
+                            android:layout_column="0"
+                            android:layout_gravity="start|center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/rightalignsource1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="5dip"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/faktpro_normal"
+                                android:text="@string/source"
+                                android:textColor="#C8C8C8"
+                                android:textSize="13sp">
+
+                            </TextView>
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:id="@+id/rightalignlikebutton1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_row="1"
+                            android:layout_column="0"
+                            android:layout_gravity="end">
+
+                            <com.like.LikeButton
+                                android:id="@+id/heart_button3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:icon_size="10dp"
+                                app:icon_type="heart" />
+                        </FrameLayout>
+                    </GridLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/rightalignframe2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="#FFFF"
+                android:clickable="true"
+                android:elevation="2dp"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rightalignimage2"
+                        android:layout_width="120dp"
+                        android:layout_height="110dp"
+                        android:layout_gravity="start"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/test_three">
+
+                    </ImageView>
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="1"
+                        android:orientation="horizontal"
+                        android:rowCount="2">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_row="0"
+                            android:layout_column="0">
+
+                            <TextView
+                                android:id="@+id/rightalignheadline2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="5dip"
+                                android:fontFamily="@font/faktpro_normal"
+                                android:text="@string/dummystring"
+                                android:textColor="@android:color/black"
+                                android:textSize="19sp">
+
+                            </TextView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_row="1"
+                            android:layout_column="0"
+                            android:layout_gravity="start|center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/rightalignsource2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="5dip"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/faktpro_normal"
+                                android:text="@string/source"
+                                android:textColor="#C8C8C8"
+                                android:textSize="13sp">
+
+                            </TextView>
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:id="@+id/rightalignlikebutton2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_row="1"
+                            android:layout_column="0"
+                            android:layout_gravity="end">
+
+                            <com.like.LikeButton
+                                android:id="@+id/heart_button4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:icon_size="10dp"
+                                app:icon_type="heart" />
+                        </FrameLayout>
+                    </GridLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#FFFF"
+                android:elevation="2dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/centerlayoutimage"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:contentDescription="@null"
+                    android:paddingStart="15dp"
+                    android:paddingTop="20dp"
+                    android:paddingEnd="15dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/test_two">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/centerlayoutheadline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:fontFamily="@font/faktpro_normal"
+                        android:text="@string/headline"
+                        android:textColor="@android:color/black"
+                        android:textSize="19sp">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/centerlayoutcontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:fontFamily="@font/faktpro_light"
+                        android:text="@string/content"
+                        android:textSize="16sp">
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/centeralignsource"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:fontFamily="@font/faktpro_normal"
+                        android:text="@string/source"
+                        android:textColor="#C8C8C8"
+                        android:textSize="13sp">
+
+                    </TextView>
+
+                    <com.like.LikeButton
+                        android:id="@+id/heart_button5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        app:icon_size="10dp"
+                        app:icon_type="heart" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
